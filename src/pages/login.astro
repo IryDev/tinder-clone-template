@@ -1,0 +1,105 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="IryDev Tinder Clone Template | Login Page">
+  <div class="screen">
+    <div class="form-container">
+      <div class="form-content">
+        <h2><a href="/">ChatSpace</a></h2>
+        <h3>Login</h3>
+        <p>
+          By continuing you agree to our terms and conditions of use as well as
+          our cookie policy.
+        </p>
+        <form action="" method="POST">
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <input class="btn-login" type="submit" value="Login" />
+        </form>
+        <p>
+          Don't you have an account ?
+          <a href="/register">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    background: linear-gradient(90deg, #fe3175, #ff6f63);
+    border-radius: 10px;
+    box-shadow: 3px 4px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 450px;
+    padding: 20px 0;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: scroll;
+  }
+
+  .form-content h2 {
+  color: white;
+  font-size: 55px;
+  margin-top: 6vw;
+}
+
+.form-content h2 a {
+  color: white;
+}
+
+.form-content h3 {
+  color: #ffffff;
+  font-size: 25px;
+  font-style: italic;
+  margin-top: 120px;
+  text-transform: uppercase;
+}
+
+.form-content p {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+  .form-container .form-content input {
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 10px 0 0;
+    border: 2px solid white;
+    background: transparent;
+    transition: 0.3s;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  input:focus {
+    transform: scale(1.05);
+  }
+</style>

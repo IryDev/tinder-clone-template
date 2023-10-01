@@ -1,0 +1,47 @@
+---
+const { name } = Astro.props;
+const { value } = Astro.props;
+const { type } = Astro.props;
+const { label } = Astro.props;
+---
+
+<div class="choice">
+  <label>
+    <input type={type} name={name} value={value} aria-label={label} />
+    <span>{value}</span>
+  </label>
+</div>
+
+<style>
+  input[type="radio"], input[type="checkbox"] {
+    display: none;
+  }
+
+  div label span {
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    border: 2px white solid;
+    width: 120px;
+    border-radius: 50px;
+    text-transform: capitalize;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    transition: 0.5s all;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  div label input[type="radio"]:checked ~ span, div label input[type="checkbox"]:checked ~ span {
+    background: white;
+    color: #e91e63;
+    box-shadow: 0 2px 20px white;
+  }
+
+  .choice{
+    display: inline-block;
+    margin: 5px;
+  }
+</style>

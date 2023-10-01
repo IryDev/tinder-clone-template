@@ -1,0 +1,128 @@
+<nav class="navbar">
+  <a class="logo" href="/">chatspace</a>
+
+  <div class="links-navbar">
+    <ul>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+      <li><a href="#">Q&A ?</a></li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="/login" class="secondary-button">Login</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="menu-hamburger">
+    <div class="button-burger-menu"></div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 50px 40px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+  }
+
+  .navbar .links-navbar ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar .links-navbar ul li {
+    margin: 0 0 0 50px;
+  }
+
+  a.logo {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .navbar .links-navbar ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  .navbar .links-navbar ul li a:hover {
+    color: #d6002f;
+    text-decoration: underline;
+  }
+
+  .navbar .links-navbar ul li a.secondary-button {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .navbar .links-navbar ul li a.secondary-button:hover {
+    color: white;
+    background: black;
+    text-decoration: none;
+  }
+  /* ----- hamburger menu ----- */
+  .menu-hamburger {
+    display: none;
+  }
+
+  .button-burger-menu {
+    background: white;
+    border-radius: 5px;
+    height: 5px;
+    transition: all 0.5s;
+    width: 35px;
+  }
+
+  .button-burger-menu::before,
+  .button-burger-menu::after {
+    background-color: white;
+    border-radius: 5px;
+    content: "";
+    height: 5px;
+    position: absolute;
+    transition: all 0.5s;
+    width: 35px;
+  }
+
+  .button-burger-menu::before {
+    transform: translateY(-10px);
+  }
+
+  .button-burger-menu::after {
+    transform: translateY(10px);
+  }
+
+  .open .button-burger-menu {
+    background-color: transparent;
+    transform: rotate(360deg);
+  }
+
+  .open .button-burger-menu::before {
+    transform: rotate(45deg);
+  }
+
+  .open .button-burger-menu::after {
+    transform: rotate(-45deg);
+  }
+
+  .secondary-button {
+  background: #ffffff;
+  border: 0;
+  border-radius: 30px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  transition: ease-out 0.3s;
+}
+</style>

@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="IryDev Tinder Clone | Home Page">
+  <main>
+    <div class="screen">
+      <div class="home">
+        <h1>LoveChat</h1>
+        <h2><span class="slogan-app"></span></h2>
+        <a href="register.html" class="primary-button">Create account</a>
+        <a href="login.html" class="mobile-login">Login</a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+	.screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.home h1 {
+  color: white;
+  font-size: 11vw;
+}
+
+.home h2 {
+  color: white;
+  font-size: 4vw;
+  margin-bottom: 20px;
+}
+
+.primary-button {
+  background: linear-gradient(45deg, #fd2b75, #ff4b2b);
+  border: 0;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 65px;
+  transition: 0.3s all;
+}
+</style>
