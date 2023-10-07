@@ -3,6 +3,8 @@ import { Nav } from "../components/Nav";
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
 import Loader from "../components/Loader.astro";
+import { Image } from "astro:assets";
+import background from "../assets/background.webp";
 
 interface Props {
   title: string;
@@ -32,10 +34,8 @@ const { title } = Astro.props;
       @import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;700&display=swap");
 
       body {
-        
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
       }
     </style>
   </body>

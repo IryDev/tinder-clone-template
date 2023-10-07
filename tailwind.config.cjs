@@ -16,7 +16,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        site: "linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.2)), url('./src/assets/background.webp')",
+        site: "linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.2)), url('/public/background.webp')",
       },
     },
   },
