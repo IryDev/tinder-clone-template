@@ -1,53 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Typing } from "../components/Typing";
 ---
 
-<Layout title="IryDev Tinder Clone | Home Page">
-  <main>
-    <div class="screen">
-      <div class="home">
-        <h1>LoveChat</h1>
-        <h2><span class="slogan-app"></span></h2>
-        <a href="register.html" class="primary-button">Create account</a>
-        <a href="login.html" class="mobile-login">Login</a>
-      </div>
-    </div>
-  </main>
+<Layout title="IryDev Tinder Clone Template| Home Page">
+  <section class="text-center p-5">
+    <h1 class="text-white text-[10vw] font-[700]">Swipe Right</h1>
+    <h2 class="text-white text-[5vw] font-[100] my-3 italic">
+      love at first
+      <Typing  aria-hidden="true" client:load />
+    </h2>
+    <a
+      href="/register"
+      title="Create an account"
+      class="block border- lg:inline-block text-xl rounded-[30px] py-3 px-16 font-bold bg-gradient-to-r lg:border-0 text-white from-darkPink to-coralRed"
+      >Create account</a
+    >
+    <a
+      href="/login"
+      title="Login page"
+      class="block text-white text-xl font-bold my-2 rounded-[30px] py-3 bg-transparent border-2 border-white lg:hidden"
+      >Login</a
+    >
+  </section>
 </Layout>
-
-<style>
-	.screen {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home {
-  text-align: center;
-  padding: 20px;
-}
-
-.home h1 {
-  color: white;
-  font-size: 11vw;
-}
-
-.home h2 {
-  color: white;
-  font-size: 4vw;
-  margin-bottom: 20px;
-}
-
-.primary-button {
-  background: linear-gradient(45deg, #fd2b75, #ff4b2b);
-  border: 0;
-  border-radius: 30px;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 12px 65px;
-  transition: 0.3s all;
-}
-</style>

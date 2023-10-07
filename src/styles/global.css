@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body{
+    font-family: "Readex Pro";
+}
+
+/* div label input[type="radio"]:checked ~ span,
+  div label input[type="checkbox"]:checked ~ span {
+    box-shadow: 0 2px 20px white;
+  } */

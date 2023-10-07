@@ -1,0 +1,22 @@
+---
+const { name } = Astro.props;
+const { value } = Astro.props;
+const { type } = Astro.props;
+const { label } = Astro.props;
+---
+
+<div class="inline-block m-3">
+  <label>
+    <input
+      class="hidden peer"
+      type={type}
+      name={name}
+      value={value}
+      aria-label={label}
+    />
+    <span
+      class="inline-block cursor-pointer bg-transparent border-solid border-2 border-white w-[120px] rounded-[50px] capitalize font-bold p-3 text-white text-[15px] peer-checked:bg-white peer-checked:text-[#e91e63] peer-checked:shadow-lg transition-all duration-300 ease-in-out"
+      >{value}</span
+    >
+  </label>
+</div>

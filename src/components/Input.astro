@@ -1,0 +1,14 @@
+---
+const { placeholder } = Astro.props;
+const { ariaLabel } = Astro.props;
+const { type } = Astro.props;
+const {name} = Astro.props;
+---
+
+<input
+  class="text-white font-bold w-full transition-all rounded-[30px] bg-transparent border-white border-2 border-solid outline-none px-4 py-3 mt-4 placeholder-white focus:scale-110"
+  type={type}
+  placeholder={placeholder}
+  aria-label={ariaLabel}
+  name={name}
+/>

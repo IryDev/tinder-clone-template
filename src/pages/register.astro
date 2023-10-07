@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Radio from "../components/Radio.astro";
+import FormLayout from "../layouts/Form-layout.astro";
+import Input from "../components/Input.astro";
+import Radio from "../components/Radio-checkbox.astro";
 
 const hobbies = [
   "cooking",
@@ -9,128 +11,77 @@ const hobbies = [
   "music",
   "dance",
   "astronomy",
-  "gardening",
-  "photography",
+  "series",
+  "photo",
   "travel",
   "cinema",
-  "videos-games",
+  "gaming",
   "drawing",
 ];
 ---
 
 <Layout title="IryDev Tinder Clone Template | Register Page">
-  <div class="screen">
-    <div class="form-container">
-      <div class="form-content">
-        <h2><a href="/">ChatSpace</a></h2>
-        <h3>Create an account</h3>
-        <p>We need informations to help you to found your love</p>
-        <form action="" method="POST">
-          <h3>Tell us more about yourself</h3>
-          <div class="main-informations">
-            <input name="name " type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" name="mail" />
-            <input type="password" placeholder="Password" name="password" />
-            <input type="text" placeholder="MM/DD/YYYY" />
-          </div>
+  <FormLayout>
+    <h1 class="text-white text-[40px] my-8 font-bold uppercase">Create an account</h1>
+    <p class="text-white mt-8 text-center">We need informations to help you to found your love</p>
+    <form action="" method="POST">
+      <h2 class="text-white text-[25px] font-bold uppercase">Tell us more about yourself</h2>
+      <div class="main-informations">
+        <Input
+          name="name"
+          type="text"
+          placeholder="Name"
+          aria-label="Enter your name"
+          name="name"
+        />
 
-          <h4>Your gender :</h4>
-          <div class="gender radio">
-            <Radio type="radio" name="user-gender" value="man" />
-            <Radio type="radio" name="user-gender" value="woman" />
-          </div>
+        <Input
+          name="name"
+          type="email"
+          placeholder="Email address"
+          aria-label="Enter your email address"
+          name="email"
+        />
 
-          <h4>You Search</h4>
-          <div class="gender radio">
-            <Radio type="radio" name="searcg-gender" value="man" />
-            <Radio type="radio" name="searcg-gender" value="woman" />
-          </div>
-
-          <h4>Your Hobbies :</h4>
-          <div class="hobbies radio">
-            {
-              hobbies.map((hobby) => (
-                <Radio type="checkbox" name="hobbies" value={hobby} />
-              ))
-            }
-          </div>
-
-          <input class="btn-login" type="submit" value="Register" />
-        </form>
-        <p>
-          Already have an account ?
-          <a href="login.html">Login</a>
-        </p>
+        <Input
+          name="password"
+          type="password"
+          placeholder="Password"
+          aria-label="Enter a password"
+          name="password"
+        />
       </div>
-    </div>
-  </div>
+
+      <h3 class="text-white text-[20px] my-2 font-bold">Your gender :</h3>
+      <div class="gender radio">
+        <Radio type="radio" name="user-gender" value="man" />
+        <Radio type="radio" name="user-gender" value="woman" />
+      </div>
+
+      <h3 class="text-white text-[20px] my-2 font-bold">You Search</h3>
+      <div class="gender radio">
+        <Radio type="radio" name="searcg-gender" value="man" />
+        <Radio type="radio" name="searcg-gender" value="woman" />
+      </div>
+
+      <h3 class="text-white text-[20px] my-2 font-bold">Your Hobbies :</h3>
+      <div class="hobbies radio">
+        {
+          hobbies.map((hobby) => (
+            <Radio type="checkbox" name="hobbies" value={hobby} />
+          ))
+        }
+      </div>
+
+      <input
+        class="bg-white text-darkPink font-bold w-full rounded-[30px] px-5 py-4 my-2 cursor-pointer"
+        type="submit"
+        value="Create an account"
+      />
+    </form>
+    <p class="text-white">
+      Already have an account ?
+      <a class="underline" href="login.html">Login</a>
+    </p>
+  </FormLayout>
 </Layout>
-
-<style>
-  .screen {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .form-container {
-    background: linear-gradient(90deg, #fe3175, #ff6f63);
-    border-radius: 10px;
-    box-shadow: 3px 4px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    width: 450px;
-    padding: 20px 0;
-  }
-
-  .form-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow-y: scroll;
-  }
-
-  .form-content h3 {
-  color: #ffffff;
-  font-size: 25px;
-  font-style: italic;
-  margin-top: 20px;
-  text-transform: uppercase;
-}
-
-.form-content h4 {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-top: 20px;
-}
-
-  .form-container .form-content input {
-    color: white;
-    font-weight: bold;
-    width: 80%;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 10px 0 0;
-    border: 2px solid white;
-    background: transparent;
-    transition: 0.3s;
-    outline: none;
-  }
-
-  input::placeholder {
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
-  input:focus {
-    transform: scale(1.05);
-  }
-</style>
